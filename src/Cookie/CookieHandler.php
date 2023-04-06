@@ -6,9 +6,16 @@ namespace PerfectApp\Cookie;
 
 trait CookieHandler
 {
-    public function set(string $name, string $value, int $expire, string $path, $domain = '', bool $secure = true, bool $httponly = true): void
-    {
-        setcookie($name, $value, $expire, $path, $domain,  $secure, $httponly);
+    public function set(
+        string $name,
+        string $value,
+        int $expire,
+        string $path,
+        string $domain = '',
+        bool $secure = true,
+        bool $httponly = true
+    ): void {
+        setcookie($name, $value, $expire, $path, $domain, $secure, $httponly);
         $_COOKIE[$name] = $value;
     }
 
