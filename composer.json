@@ -1,0 +1,36 @@
+{
+  "name": "krubio/perfect-theme",
+  "description": "Theme Switcher",
+  "keywords": [
+    "Theme Switcher",
+    "Bootstrap 5 Theme Switcher"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Kevin Rubio",
+      "email": "ducatikevin@yahoo.com",
+      "homepage": "https://github.com/benanamen/perfect-theme",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=8.0.0",
+    "phpstan/phpstan": "^1.10"
+  },
+  "require-dev": {
+    "codeception/codeception": "^5.0",
+    "codeception/module-asserts": "*"
+  },
+  "scripts": {
+    "test": [
+      "php vendor/bin/codecept run --coverage --coverage-html  --coverage-xml"
+    ]
+  },
+  "autoload": {
+    "psr-4": {
+      "PerfectApp\\": "src/"
+    }
+  }
+}
+
