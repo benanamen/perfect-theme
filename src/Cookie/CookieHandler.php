@@ -12,8 +12,8 @@ trait CookieHandler
         int $expire,
         string $path,
         string $domain = '',
-        bool $secure = true,
-        bool $httponly = true
+        bool $secure = false,
+        bool $httponly = false
     ): void {
         setcookie($name, $value, $expire, $path, $domain, $secure, $httponly);
         $_COOKIE[$name] = $value;
